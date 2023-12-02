@@ -1,0 +1,13 @@
+<div>
+    <h2>Liste des réservations</h2>
+    <ul class="reserve">
+        <li *ngFor="let reservation of table; let i = index" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}"
+            style="margin: 15px 20px; color: blue;">
+            <div>
+                <h3 style="margin-left: 2px">id = {{reservation.id }} Membre = {{reservation.name }}</h3>
+                <p>Match type: {{ reservation.party }}Time: {{ reservation.time }} <img [src]="reservation.photo"
+                        alt="{{ reservation.name }}" style="height: 100px;"></p>
+            </div>
+        </li>
+    </ul>
+</div>
